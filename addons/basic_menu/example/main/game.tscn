@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu6uycsspn8ha"]
+
+[ext_resource type="Script" path="res://data/src/scenes/main/game.gd" id="1_th117"]
+[ext_resource type="Texture2D" uid="uid://blf0y3gcy4gge" path="res://import/export/main_game_v00.png" id="1_w2ek0"]
+[ext_resource type="PackedScene" uid="uid://bv8mgwcyv44yo" path="res://data/src/scenes/modules/overlay/overlay_menu.tscn" id="3_ict24"]
+[ext_resource type="Texture2D" uid="uid://dd13fn71ada0s" path="res://import/export/ui_menu_v00.png" id="4_hru0a"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_th117")
+
+[node name="Bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_w2ek0")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer"]
+layout_mode = 2
+text = "Some text here"
+
+[node name="CenterContainer2" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OverlayMenu" parent="CenterContainer2" instance=ExtResource("3_ict24")]
+unique_name_in_owner = true
+layout_mode = 2
+background_img = ExtResource("4_hru0a")

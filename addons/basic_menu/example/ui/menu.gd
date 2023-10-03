@@ -32,7 +32,7 @@ func process_input():
 			overlay.toggle_overlay()
 
 func return_to_main():
-	SceneSwitcher.switch_scenes("res://data/src/scenes/ui/outro.tscn")
+	SceneSwitcher.switch_scenes("ui/outro.tscn")
 
 func start_level(level_id : int):
-	SceneSwitcher.start_game('res://data/src/scenes/main/game.tscn', levels[level_id])
+	SceneSwitcher.start_game('main/game.tscn', levels[level_id])

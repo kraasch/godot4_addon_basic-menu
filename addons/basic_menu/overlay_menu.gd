@@ -1,13 +1,6 @@
 extends Control
 class_name OverlayMenu
 
-# NOTE: If no cards_container is set the menu is in Overlay Mode and adds the cards to its own container.
-# Otherwise the menu is in EmbedMode and uses the the cards_container to add the MenuCards.
-# The OverlayMenu is intended to be either used in Overlay Mode or in Embed Mode, but not mixed.
-#
-# Embed Mode:   When cards_container is set. Permanently look for input and disable overlay toggle.
-# Overlay Mode: When no cards_container is set. Look for input, when overlay is toggled.
-
 #@export var node_to_pause : Node = null # TODO: maybe later, implement pausing parent.
 @export var cards : Array[MenuCard] = []
 @export var background_img : Texture2D = null # TODO: maybe later, as default create a gray background texture.
